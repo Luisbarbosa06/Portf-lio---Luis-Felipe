@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio- Luis Felipe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="particulas"></div>
+
+  <div class="nav-links">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contatos">Contatos</a>
+  </div>
+
+  <main id="inicio" class="topo">
+    <img src="luisf.jpg" alt="Foto de Luis Felipe" class="foto-perfil">
+    <h1>Luis Felipe Barbosa</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor Front-End | JavaScript | NodeJs | MySQL</p>
+  </main>
+
+  <div class="redes-sociais">
+    <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank">
+      <img src="linkedin.png" alt="linkedin">
+    </a>
+    <a href="https://github.com/Luisbarbosa06" target="_blank">
+      <img src="github.png" alt="github">
+
+    </a>
+    <a href="https://wa.me/+5524999230188" target="_blank">
+      <img src="whatsapp.png" alt="whatsapp">
+    </a>
+
+  </div>
+
+
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Olá, sou militar da ativa na Academia militar das Agulhas Negras, e estou em transição de carreira para a área
+        de programação. Enquanto estudante de Análise e Desenvolvimento de Sistema, sempre me atrai por apresentações de
+        projetos e Enquanto programador, expresso meu interesse pela representação gráfica através do Front-End.
+      </p>
+    </div>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <h2 class="projetos-titulo">Meus Projetos</h2>
+    <div class="projetos-caixa">
+
+      <div class="projetos-card">
+        <img src="Pestshop2.jpeg" alt="Projeto 1" class="projetos-imagem">
+        <div class="caixa-texto-projeto">
+          <h3 class="info-projetos">Petshop Shalom</h3>
+          <p class="paragrafo-projetos">Esse é um projeto de site para um petshop, criado com HTML e CSS, pensado para
+            facilitar a vida de quem ama e cuida dos pets. A ideia é apresentar os principais serviços oferecidos, como
+            banho, tosa e venda de produtos, de forma clara e atrativa.</p>
+        </div>
+
+      </div>
+
+      <div class="projetos-card">
+        <img src="Alfatech2.jpeg" alt="Projeto 2" class="projetos-imagem">
+        <div class="caixa-texto-projeto">
+          <h3 class="info-projetos">Alfatech</h3>
+          <p class="paragrafo-projetos">Projeto website para um provedor de hospedagem. O foco está em um visual limpo e
+            funcional, com
+            uma interface amigável para o usuário. Ainda está em fase inicial, mas a ideia é evoluir o projeto com novas
+            funcionalidades no futuro.</p>
+        </div>
+
+      </div>
+
+      <div class="projetos-card">
+        <img src="Cafeteria2.jpeg" alt="Projeto 3" class="projetos-imagem">
+        <div class="caixa-texto-projeto">
+          <h3 class="info-projetos">Cafeteria</h3>
+          <p class="paragrafo-projetos">Uma cafeteria com alma nova-iorquina e um site à altura. Este projeto traz o
+            charme urbano da Manhattan - Coffee House para a web, com um layout moderno e uma experiência acolhedora.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contatos" class="contatos">
+    <h2 class="contatos-titulos">Entre em Contato</h2>
+
+    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+      <div class="grupo-form">
+        <input placeholder="Nome" class="campo-form" id="nome">
+      </div>
+
+      <div class="grupo-form">
+        <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+      </div>
+      <button type="submit" class="botao-form">Enviar Whatsapp</button>
+    </form>
+
+  </section>
+
+  <div class="texto-rodape">
+    <p>&copy; Portfólio - Desenvolvido por Luis Felipe Barbosa - Todos os direitos reservados</p>
+  </div>
+
+  <script>
+    function enviarWhats(event) {
+      event.preventDefault()
+
+      const nome = document.getElementById('nome').value;
+      const mensagem = document.getElementById('mensagem').value;
+      const telefone = '5524999230188'
+
+      const texto = `Olá! me chamo ${nome}, ${mensagem}`
+      const msgFormatada = encodeURIComponent(texto)
+
+      const url = `https://wa.me/${telefone}?t=${msgFormatada}`
+
+      console.log(url)
+
+        window.open(url, '_blank')
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>
