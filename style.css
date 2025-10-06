@@ -35,7 +35,7 @@ body {
 }
 
 .nav-links a {
-    font-size: 22px;
+    font-size: 25px;
     position: relative;
     font-weight: 600;
     text-decoration: none;
@@ -75,7 +75,7 @@ body {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     color: #4f46e5;
     font-weight: bold;
     margin: 15px;
@@ -83,7 +83,7 @@ h1 {
 
 .cabecalho-sub-titulo {
     color: #e2e8f0;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
 }
 
 .redes-sociais {
@@ -120,7 +120,7 @@ padding: 6rem 2rem;
 }
 
 .sobre-titulo {
-font-size: 3rem;
+font-size: 2.5rem;
 color: #e2e8f0;
 text-align: center;
 margin-bottom: 20px;
@@ -139,13 +139,13 @@ background: rgba(255, 255, 255, 0.3);
 
 .sobre-paragrafo {
 text-align: center;
-font-size: 1.4rem;
+font-size: 1.2rem;
 }
 
 
 .projetos-titulo {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     margin-bottom: 50px;
 }
 
@@ -157,7 +157,7 @@ font-size: 1.4rem;
 .projetos-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -180,7 +180,7 @@ font-size: 1.4rem;
 
 .info-projetos {
     margin-bottom: 5px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .caixa-texto-projeto {
@@ -189,7 +189,7 @@ font-size: 1.4rem;
 .paragrafo-projetos {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.55rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .contatos {
@@ -198,7 +198,7 @@ font-size: 1.4rem;
 
 .contatos-titulos {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     margin-bottom: 50px;
 }
 
