@@ -291,26 +291,27 @@ font-size: 1.1rem;
 /* ====== RESPONSIVIDADE ====== */
 @media (max-width: 768px) {
   .nav-links {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    display: flex;
+    gap: 1.5rem;
     padding: 1rem;
-    font-size: 18px;
     position: relative;
+    justify-content: center;
     background: transparent;
   }
 
   .nav-links a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .foto-perfil {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1,8rem;
     text-align: center;
   }
 
