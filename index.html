@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio- Luis Felipe</title>
+  <title>Portfólio - Luis Felipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,164 +15,524 @@
 
   <div class="particulas"></div>
 
-  <div class="nav-links">
-
+  <!-- NAVBAR -->
+  <nav class="nav-links" id="navbar">
     <div class="portfolio">
-      <p>Portfólio</p>
+      <p>&lt;LF /&gt;</p>
     </div>
 
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contatos">Contatos</a>
-
-  </div>
-
-  <main id="inicio" class="topo">
-    <img src="fotoperfil3.jpeg" alt="Foto de Luis Felipe" class="foto-perfil">
-    <h1>Olá, eu sou</h1>
-    <h2 class="nome">Luis Felipe Custódio Barbosa</h2>
-    <h3>Sempre em constante evolução dentro da tecnologia, desenvolvendo aplicações focadas no Front-End</h3>
-
-
-
-    <div class="icons">
-      <img src="dev.png" alt="dev">
-      <img src="css.png" alt="css">
-      <img src="html.png" alt="html">
-      <img src="javascript.png" alt="javascript">
-      <img src="react.png" alt="react">
-      <img src="git.png" alt="git">
+    <div class="nav-menu" id="navMenu">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#especialidades">Skills</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contatos">Contato</a>
     </div>
 
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- HERO - SIDE BY SIDE -->
+  <main id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-up">
+        <span class="hero-label">Olá, eu sou</span>
+        <h1 class="hero-nome">Luis Felipe<br><span>Custódio Barbosa</span></h1>
+        <p class="hero-desc">Desenvolvedor Web com experiência prática em PHP, MySQL e JavaScript, atuando na manutenção e evolução de sistemas web. Domínio de versionamento com Git, manipulação de banco de dados, integração entre front-end e back-end e organização de código orientado a boas práticas.</p>
+
+        <div class="hero-sociais">
+          <a href="https://github.com/Luisbarbosa06" target="_blank" aria-label="GitHub">
+            <img src="github22.png" alt="github">
+          </a>
+          <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank" aria-label="LinkedIn">
+            <img src="linkedin22.png" alt="linkedin">
+          </a>
+          <a href="https://wa.me/+5524999230188" target="_blank" aria-label="WhatsApp">
+            <img src="whatsapp22.png" alt="whatsapp">
+          </a>
+        </div>
+
+        <a href="assets/luis.pdf" download class="botao-curriculo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Baixar CV
+        </a>
+      </div>
+
+      <div class="hero-foto fade-up">
+        <div class="foto-wrapper">
+          <img src="fotoperfil3.jpeg" alt="Foto de Luis Felipe" class="foto-perfil">
+          <div class="foto-anel"></div>
+        </div>
+        <div class="foto-badge">Front-end Developer</div>
+      </div>
+    </div>
   </main>
 
+  <!-- SOBRE -->
   <section id="sobre" class="sobre">
-    <h2 class="sobre-titulo">SOBRE <span>MIM</span></h2>
-    <div class="sobre-caixa">
-      <h2 class="sobre-paragrafo1">
-        Graduando em Análise e Desenvolvimento de Sistemas, pela Universidade Estácio de Sá - Rio de Janeiro
-      </h2>
+    <div class="secao-container">
+      <div class="secao-header scroll-reveal">
+        <span class="secao-label">// sobre mim</span>
+        <h2 class="secao-titulo">Quem <span>Sou</span></h2>
+      </div>
+      <div class="sobre-conteudo scroll-reveal">
+        <div class="sobre-texto">
+          <p>Graduando em <strong>Análise e Desenvolvimento de Sistemas</strong> pela Universidade Estácio de Sá, com foco em atuação como Desenvolvedor Front-end.</p>
+          <p>Possuo conhecimentos sólidos em <strong>React.js, JavaScript (ES6+), HTML5 e CSS3</strong>, aplicados no desenvolvimento de interfaces modernas e responsivas orientadas à experiência do usuário.</p>
+          <p>Possuo experiência profissional em ambiente corporativo estruturado, atuando como Auxiliar Administrativo no <strong>Exército Brasileiro</strong>, onde utilizei diariamente sistemas informatizados, análise de dados e organização de informações.</p>
+          <p>Busco minha primeira oportunidade como Desenvolvedor Front-end para aplicar boas práticas, aprender com times experientes e contribuir com soluções eficientes.</p>
+        </div>
+        <div class="sobre-info">
+          <div class="info-item">
+            <span class="info-label">Formação</span>
+            <span class="info-valor">Análise e Des. de Sistemas</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Instituição</span>
+            <span class="info-valor">Estácio de Sá - RJ</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Experiência</span>
+            <span class="info-valor">Aux. Administrativo - EB</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Idioma</span>
+            <span class="info-valor">Inglês - Intermediário</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p class="sobre-paragrafo2">
-          Com foco em atuação como Desenvolvedor Front-end, direcionado à criação de interfaces modernas, funcionais e responsivas. Possuo conhecimentos sólidos em React.js, JavaScript (ES6+), HTML5 e CSS3, aplicados no desenvolvimento de aplicações Front-end orientadas à experiência do usuário. Tenho interesse em oportunidades presenciais e remotas, buscando crescimento profissional na área de tecnologia.
-          Atualmente, possuo experiência profissional em ambiente corporativo estruturado, atuando como Auxiliar Administrativo no Exército Brasileiro, onde utilizo diariamente sistemas informatizados, análise de dados e organização de informações. Essa vivência contribuiu para o desenvolvimento de habilidades como atenção aos detalhes, organização, pensamento analítico e trabalho em equipe, competências que aplico diretamente no desenvolvimento de software e na escrita de código limpo e estruturado.
-          Complemento minha formação acadêmica com cursos focados em React.js, JavaScript, HTML, CSS, Node.js, SQL e Git/GitHub, além de manter projetos práticos disponíveis no GitHub e portfólio online. Busco minha primeira oportunidade como Desenvolvedor Front-end para aplicar boas práticas de desenvolvimento, aprender com times experientes e contribuir com soluções eficientes, escaláveis e alinhadas às necessidades do negócio.
-      </p>
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
+  <section id="experiencia" class="experiencia">
+    <div class="secao-container">
+      <div class="secao-header scroll-reveal">
+        <span class="secao-label">// trajetória</span>
+        <h2 class="secao-titulo">Experiência <span>Profissional</span></h2>
+      </div>
 
+      <div class="exp-timeline">
+        <div class="exp-card scroll-reveal">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="exp-content">
+            <span class="exp-periodo">Fev/2026 – Atualmente</span>
+            <h3 class="exp-cargo">Programador</h3>
+            <span class="exp-empresa">Brasmid – Volta Redonda, RJ</span>
+            <p class="exp-desc">
+              Desenvolvimento e manutenção de funcionalidades em sistemas web utilizando PHP, JavaScript e MySQL. Criação e otimização de consultas SQL para manipulação e integridade dos dados. Estruturação e manutenção de banco de dados, incluindo criação e alteração de tabelas, colunas e relacionamentos. Identificação e correção de bugs garantindo estabilidade em produção. Versionamento com Git, deploy em ambiente Linux via WSL e integração com servidores remotos. Integração front-end/back-end e melhoria de performance seguindo boas práticas de desenvolvimento.
+            </p>
+          </div>
+        </div>
 
-      <a href="assets/LUISFELIPE.pdf" download class="botao-curriculo">
-        BAIXAR CV
-      </a>
+        <div class="exp-card scroll-reveal">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="exp-content">
+            <span class="exp-periodo">Mar/2018 – Dez/2025</span>
+            <h3 class="exp-cargo">Auxiliar Administrativo</h3>
+            <span class="exp-empresa">Exército Brasileiro</span>
+            <p class="exp-desc">
+              Utilização diária de sistemas informatizados para controle e gestão de dados administrativos. Conferência, validação e organização de informações em bases de dados e relatórios. Elaboração e atualização de relatórios administrativos para suporte à tomada de decisão. Atuação em ambiente corporativo estruturado, com foco em processos, organização e trabalho em equipe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="redes-sociais">
+  <!-- ESPECIALIDADES -->
+  <section id="especialidades" class="especialidades">
+    <div class="secao-container">
+      <div class="secao-header scroll-reveal">
+        <span class="secao-label">// especialidades</span>
+        <h2 class="secao-titulo">Minhas <span>Skills</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Front-end</h3>
+          <ul>
+            <li>React.js / Hooks / Router</li>
+            <li>JavaScript (ES6+)</li>
+            <li>HTML5 Semântico</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Estilização</h3>
+          <ul>
+            <li>CSS3 / Flexbox / Grid</li>
+            <li>Design Responsivo</li>
+            <li>Animações CSS</li>
+            <li>Glassmorphism / UI Moderno</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <h3>Ferramentas</h3>
+          <ul>
+            <li>Git / GitHub</li>
+            <li>VS Code</li>
+            <li>Vite</li>
+            <li>Deploy com Vercel</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Back-end & Banco</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>SQL / MySQL</li>
+            <li>Supabase</li>
+            <li>APIs REST</li>
+            <li>PHPmyAdmin</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h3>Formação</h3>
+          <ul>
+            <li>React.js – DevMedia</li>
+            <li>JavaScript + Node.js – Udemy</li>
+            <li>HTML, CSS, JS – DevMedia</li>
+            <li>SQL e MySQL – Guanabara</li>
+            <li>PHP - DevMedia</li>
+            <li>VUE.Js</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-reveal">
+          <div class="skill-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Outros</h3>
+          <ul>
+            <li>Metodologias Ágeis</li>
+            <li>Excel Avançado</li>
+            <li>Análise de Dados</li>
+            <li>IA para Desenvolvimento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS COM CAROUSEL -->
+  <section id="projetos" class="projetos">
+    <div class="secao-container">
+      <div class="secao-header scroll-reveal">
+        <span class="secao-label">// portfólio</span>
+        <h2 class="secao-titulo">Últimos <span>Projetos</span></h2>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">&#10094;</button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+
+            <div class="projetos-card">
+              <a href="https://github.com/Luisbarbosa06/Projeto---Sorveteria" target="_blank" class="projeto-link">
+                <div class="projeto-imagem-container">
+                  <img src="Layout-inicial1.png" alt="Projeto Gelateria" class="projetos-imagem">
+                  <div class="projeto-overlay">
+                    <span>Ver Projeto</span>
+                  </div>
+                </div>
+              </a>
+              <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Gelateria</h3>
+                <div class="projeto-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">App Router</span>
+                </div>
+                <p class="paragrafo-projetos">Projeto criado em React sobre uma sorveteria, utilizando o recurso App Router para criar uma aplicação com múltiplas páginas e navegação entre rotas.</p>
+              </div>
+            </div>
+
+            <div class="projetos-card">
+              <a href="https://github.com/Luisbarbosa06/Dashboard-de-Finan-as.git" target="_blank" class="projeto-link">
+                <div class="projeto-imagem-container">
+                  <img src="projeto4.jpeg" alt="Projeto Dashboard" class="projetos-imagem">
+                  <div class="projeto-overlay">
+                    <span>Ver Projeto</span>
+                  </div>
+                </div>
+              </a>
+              <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Dashboard de Finanças</h3>
+                <div class="projeto-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Supabase</span>
+                  <span class="tag">Vite</span>
+                </div>
+                <p class="paragrafo-projetos">Aplicação web de gerenciamento financeiro pessoal que permite controlar receitas, despesas e metas de economia com gráficos interativos.</p>
+              </div>
+            </div>
+
+            <div class="projetos-card">
+              <a href="https://github.com/Luisbarbosa06/Cafeteria-Manhattan" target="_blank" class="projeto-link">
+                <div class="projeto-imagem-container">
+                  <img src="Cafeteria2.jpeg" alt="Projeto Cafeteria" class="projetos-imagem">
+                  <div class="projeto-overlay">
+                    <span>Ver Projeto</span>
+                  </div>
+                </div>
+              </a>
+              <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Cafeteria Manhattan</h3>
+                <div class="projeto-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">Responsivo</span>
+                </div>
+                <p class="paragrafo-projetos">Uma cafeteria com alma nova-iorquina e um site à altura. Layout moderno e experiência acolhedora.</p>
+              </div>
+            </div>
+
+            <div class="projetos-card">
+              <a href="https://github.com/Luisbarbosa06/Petshop/tree/main/petshop" target="_blank" class="projeto-link">
+                <div class="projeto-imagem-container">
+                  <img src="Pestshop2.jpeg" alt="Projeto Petshop" class="projetos-imagem">
+                  <div class="projeto-overlay">
+                    <span>Ver Projeto</span>
+                  </div>
+                </div>
+              </a>
+              <div class="caixa-texto-projeto">
+                <h3 class="info-projetos">Petshop Shalom</h3>
+                <div class="projeto-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                </div>
+                <p class="paragrafo-projetos">Site para um petshop, criado com HTML e CSS, apresentando serviços como banho, tosa e venda de produtos.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-btn-next" aria-label="Próximo">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contatos" class="contatos">
+    <div class="secao-container">
+      <div class="secao-header scroll-reveal">
+        <span class="secao-label">// contato</span>
+        <h2 class="secao-titulo">Entre em <span>Contato</span></h2>
+      </div>
+
+      <form class="formulario-contato scroll-reveal" id="formulario" onsubmit="enviarWhats(event)">
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome">
+        </div>
+        <div class="grupo-form">
+          <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+        </div>
+        <button type="submit" class="botao-form">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Enviar WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="texto-rodape">
+    <div class="rodape-conteudo">
+      <div class="rodape-sociais">
         <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank">
           <img src="linkedin22.png" alt="linkedin">
         </a>
         <a href="https://github.com/Luisbarbosa06" target="_blank">
           <img src="github22.png" alt="github">
-
         </a>
         <a href="https://wa.me/+5524999230188" target="_blank">
           <img src="whatsapp22.png" alt="whatsapp">
         </a>
-
       </div>
+      <p>&copy; 2026 Portfólio - Desenvolvido por Luis Felipe Barbosa</p>
     </div>
-
-
-
-  </section>
-
-  <section id="projetos" class="projetos">
-    <h2 class="projetos-titulo">ÚLTIMOS <span>PROJETOS</span></h2>
-    <div class="projetos-caixa">
-
-      <div class="projetos-card">
-        <a href="https://github.com/Luisbarbosa06/Petshop/tree/main/petshop" target="_blank">
-          <img src="Pestshop2.jpeg" alt="Projeto 1" class="projetos-imagem">
-        </a>
-        <div class="caixa-texto-projeto">
-          <h3 class="info-projetos">Petshop Shalom</h3>
-          <p class="paragrafo-projetos">Esse é um projeto de site para um petshop, criado com HTML e CSS, pensado para
-            facilitar a vida de quem ama e cuida dos pets. A ideia é apresentar os principais serviços oferecidos, como
-            banho, tosa e venda de produtos, de forma clara e atrativa.</p>
-        </div>
-
-      </div>
-
-      <div class="projetos-card">
-        <a href="https://github.com/Luisbarbosa06/Projeto---Sorveteria" target="_blank">
-          <img src="Layout-inicial1.png" alt="Projeto 2" class="projetos-imagem">
-        </a>
-        <div class="caixa-texto-projeto">
-          <h3 class="info-projetos">Gelateria</h3>
-          <p class="paragrafo-projetos">Projeto criado em React sobre uma sorveteria, utilizando o recurso App Router
-            para criar uma aplicação React com múltiplas páginas e Implementar a navegação entre páginas em uma
-            aplicação React.</p>
-        </div>
-
-      </div>
-
-      <div class="projetos-card">
-        <a href="https://github.com/Luisbarbosa06/Cafeteria-Manhattan" target="_blank">
-          <img src="Cafeteria2.jpeg" alt="Projeto 3" class="projetos-imagem">
-        </a>
-        <div class="caixa-texto-projeto">
-          <h3 class="info-projetos">Cafeteria</h3>
-          <p class="paragrafo-projetos">Uma cafeteria com alma nova-iorquina e um site à altura. Este projeto traz o
-            charme urbano da Manhattan - Coffee House para a web, com um layout moderno e uma experiência acolhedora.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <section id="contatos" class="contatos">
-    <h2 class="contatos-titulos">Entre em Contato</h2>
-
-    <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-      <div class="grupo-form">
-        <input placeholder="Nome" class="campo-form" id="nome">
-      </div>
-
-      <div class="grupo-form">
-        <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
-      </div>
-      <button type="submit" class="botao-form">Enviar Whatsapp</button>
-    </form>
-
-  </section>
-
-
+  </footer>
 
   <script>
+    // ===== WHATSAPP =====
     function enviarWhats(event) {
       event.preventDefault()
-
       const nome = document.getElementById('nome').value;
       const mensagem = document.getElementById('mensagem').value;
       const telefone = '5524999230188'
-
       const texto = `Olá! me chamo ${nome}, ${mensagem}`
       const msgFormatada = encodeURIComponent(texto)
-
       const url = `https://wa.me/${telefone}?t=${msgFormatada}`
-
       console.log(url)
-
       window.open(url, '_blank')
     }
 
+    // ===== HAMBURGER MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
 
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
 
+    // ===== HERO FADE-IN =====
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade-up').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 150 + i * 200);
+      });
+    });
 
+    // ===== SCROLL REVEAL (rápido) =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
+
+    // ===== CAROUSEL =====
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.carousel-track .projetos-card');
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    const dotsContainer = document.getElementById('carouselDots');
+    const viewportEl = document.querySelector('.carousel-viewport');
+
+    let currentIndex = 0;
+    let cardsPerView = getCardsPerView();
+    const gap = 24;
+
+    function getCardsPerView() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      return 3;
+    }
+
+    function getCardWidth() {
+      const viewportWidth = viewportEl.offsetWidth;
+      return (viewportWidth - gap * (cardsPerView - 1)) / cardsPerView;
+    }
+
+    function getTotalSlides() {
+      return Math.max(1, cards.length - cardsPerView + 1);
+    }
+
+    function sizeCards() {
+      const w = getCardWidth();
+      cards.forEach(card => {
+        card.style.minWidth = w + 'px';
+        card.style.maxWidth = w + 'px';
+      });
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < getTotalSlides(); i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        if (i === currentIndex) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      sizeCards();
+      const offset = currentIndex * (getCardWidth() + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+      prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+      nextBtn.style.opacity = currentIndex >= getTotalSlides() - 1 ? '0.3' : '1';
+    }
+
+    function goToSlide(index) {
+      currentIndex = Math.max(0, Math.min(index, getTotalSlides() - 1));
+      updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    let touchStartX = 0;
+    viewportEl.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    viewportEl.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goToSlide(currentIndex + 1) : goToSlide(currentIndex - 1);
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      cardsPerView = getCardsPerView();
+      if (currentIndex >= getTotalSlides()) currentIndex = getTotalSlides() - 1;
+      buildDots();
+      updateCarousel();
+    });
+
+    buildDots();
+    updateCarousel();
   </script>
-  <div class="texto-rodape">
-    <p>&copy; Portfólio - Desenvolvido por Luis Felipe Barbosa - Todos os direitos reservados</p>
-  </div>
+
 </body>
 
 </html>

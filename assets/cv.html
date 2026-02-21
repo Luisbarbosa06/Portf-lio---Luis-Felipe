@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Luis Felipe Custódio Barbosa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.5;
+      padding: 40px 50px;
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 13px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #2d2d2d;
+      padding-bottom: 15px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+    }
+
+    .header .objetivo {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contato-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .contato-info a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    /* Sections */
+    .secao {
+      margin-bottom: 16px;
+    }
+
+    .secao-titulo {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1.5px solid #555;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .resumo {
+      text-align: justify;
+      color: #333;
+    }
+
+    /* Experience */
+    .cargo-linha {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .cargo {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .periodo {
+      font-size: 12px;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .empresa {
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 4px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      color: #333;
+    }
+
+    /* Projects */
+    .projeto-item {
+      margin-bottom: 10px;
+    }
+
+    .projeto-nome {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .projeto-tech {
+      font-size: 12px;
+      color: #555;
+      font-style: italic;
+    }
+
+    .projeto-desc {
+      color: #333;
+      margin-top: 2px;
+    }
+
+    /* Skills grid */
+    .habilidades-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 30px;
+    }
+
+    .habilidades-grid li {
+      margin-bottom: 2px;
+    }
+
+    /* Courses */
+    .cursos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 30px;
+    }
+
+    .cursos-grid li {
+      margin-bottom: 2px;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        padding: 20px 30px;
+        font-size: 12px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>LUIS FELIPE CUSTÓDIO BARBOSA</h1>
+    <div class="objetivo">Objetivo Profissional: Desenvolvedor Front-end React Júnior</div>
+    <div class="contato-info">
+      <span>sdluisbarbosa@gmail.com</span>
+      <span>|</span>
+      <span>(24) 99923-0188</span>
+      <span>|</span>
+      <span>Rio de Janeiro - RJ</span>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/">LinkedIn</a>
+      <span>|</span>
+      <a href="https://github.com/Luisbarbosa06">GitHub</a>
+      <span>|</span>
+      <a href="https://portfolio-luis-felipe.vercel.app/">Portfólio</a>
+    </div>
+  </div>
+
+  <!-- RESUMO PROFISSIONAL -->
+  <div class="secao">
+    <h2 class="secao-titulo">Resumo Profissional</h2>
+    <p class="resumo">
+      Graduando em Análise e Desenvolvimento de Sistemas, com foco em atuação como Desenvolvedor Front-end React Júnior.
+      Possuo conhecimentos sólidos em React.js, JavaScript (ES6+), HTML5 e CSS3, aplicados no desenvolvimento de interfaces
+      responsivas e funcionais com técnicas modernas como CSS Grid, Flexbox, Glassmorphism e animações CSS.
+      Tenho experiência com Git/GitHub, deploy de aplicações em produção (Vercel) e integração Front-end com APIs externas.
+      Utilizo ferramentas de IA como assistentes de desenvolvimento para otimizar fluxos de trabalho e acelerar entregas.
+      Atuei em ambiente corporativo estruturado no Exército Brasileiro, fortalecendo habilidades analíticas, organização e
+      atenção aos detalhes. Busco aplicar boas práticas de desenvolvimento, evoluir tecnicamente e contribuir com soluções
+      eficientes focadas na experiência do usuário.
+    </p>
+  </div>
+
+  <!-- FORMAÇÃO ACADÊMICA -->
+  <div class="secao">
+    <h2 class="secao-titulo">Formação Acadêmica</h2>
+    <div class="cargo-linha">
+      <span class="cargo">Análise e Desenvolvimento de Sistemas</span>
+      <span class="periodo">Cursando</span>
+    </div>
+    <div class="empresa">Universidade Estácio de Sá - Rio de Janeiro</div>
+  </div>
+
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
+  <div class="secao">
+    <h2 class="secao-titulo">Experiência Profissional</h2>
+
+    <div class="cargo-linha">
+      <span class="cargo">Auxiliar Administrativo</span>
+      <span class="periodo">03/2018 – 12/2025</span>
+    </div>
+    <div class="empresa">Exército Brasileiro</div>
+    <ul>
+      <li>Utilização diária de sistemas informatizados para controle e gestão de dados administrativos.</li>
+      <li>Conferência, validação e organização de informações em bases de dados e relatórios.</li>
+      <li>Apoio a processos internos, garantindo padronização, precisão e qualidade da informação.</li>
+      <li>Elaboração e atualização de relatórios administrativos para suporte à tomada de decisão.</li>
+      <li>Atuação em ambiente corporativo estruturado, com foco em processos, organização e trabalho em equipe.</li>
+    </ul>
+  </div>
+
+  <!-- PROJETOS PESSOAIS -->
+  <div class="secao">
+    <h2 class="secao-titulo">Projetos Pessoais</h2>
+
+    <div class="projeto-item">
+      <span class="projeto-nome">Portfólio Pessoal</span>
+      <span class="projeto-tech"> — HTML5, CSS3 (Grid, Flexbox, Glassmorphism, Keyframes), JavaScript (ES6+), Vercel</span>
+      <p class="projeto-desc">
+        Site responsivo com navegação suave, animações CSS, efeito glassmorphism, layout CSS Grid adaptativo, integração com
+        a API do WhatsApp para formulário de contato e deploy em produção via Vercel. Desenvolvido com assistência de
+        ferramentas de IA (Claude Code).
+      </p>
+    </div>
+
+    <div class="projeto-item">
+      <span class="projeto-nome">Gelateria</span>
+      <span class="projeto-tech"> — React.js, App Router, Componentização</span>
+      <p class="projeto-desc">
+        Aplicação React com múltiplas páginas utilizando App Router, implementando navegação entre rotas e componentização
+        de interface.
+      </p>
+    </div>
+
+    <div class="projeto-item">
+      <span class="projeto-nome">Cafeteria Manhattan</span>
+      <span class="projeto-tech"> — HTML5, CSS3, Design Responsivo</span>
+      <p class="projeto-desc">
+        Site institucional com layout moderno inspirado em cafeterias nova-iorquinas, utilizando design responsivo e estilização avançada.
+      </p>
+    </div>
+
+    <div class="projeto-item">
+      <span class="projeto-nome">Petshop Shalom</span>
+      <span class="projeto-tech"> — HTML5, CSS3</span>
+      <p class="projeto-desc">
+        Site para petshop com apresentação de serviços (banho, tosa, produtos), interface clara e navegação intuitiva.
+      </p>
+    </div>
+  </div>
+
+  <!-- HABILIDADES -->
+  <div class="secao">
+    <h2 class="secao-titulo">Habilidades Técnicas</h2>
+    <ul class="habilidades-grid">
+      <li>React.js (Componentização, Hooks, Router)</li>
+      <li>JavaScript (ES6+) e Manipulação do DOM</li>
+      <li>HTML5 Semântico e Acessibilidade</li>
+      <li>CSS3 Avançado (Grid, Flexbox, Animações)</li>
+      <li>Design Responsivo e Media Queries</li>
+      <li>Glassmorphism e UI/UX Moderno</li>
+      <li>Versionamento com Git e GitHub</li>
+      <li>Deploy e CI/CD com Vercel</li>
+      <li>Integração Front-end com APIs REST</li>
+      <li>Desenvolvimento assistido por IA (Claude Code)</li>
+    </ul>
+  </div>
+
+  <!-- CURSOS -->
+  <div class="secao">
+    <h2 class="secao-titulo">Cursos e Certificações</h2>
+    <ul class="cursos-grid">
+      <li>React.js – DevMedia (Avançado)</li>
+      <li>HTML, CSS e JavaScript – DevMedia (Avançado)</li>
+      <li>JavaScript com Node.js – Udemy (Avançado)</li>
+      <li>SQL e MySQL – Gustavo Guanabara (Básico)</li>
+      <li>Excel Avançado – Curso Livre</li>
+    </ul>
+  </div>
+
+  <!-- IDIOMAS -->
+  <div class="secao">
+    <h2 class="secao-titulo">Idiomas</h2>
+    <ul>
+      <li>Inglês – Intermediário</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
