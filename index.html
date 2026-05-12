@@ -18,11 +18,12 @@
   <!-- NAVBAR -->
   <nav class="nav-links" id="navbar">
     <div class="portfolio">
-      <p>&lt;LF /&gt;</p>
+      <span class="logo-bracket">&lt;/LF&gt;</span>
+      <span class="logo-nome">Luis Felipe</span>
     </div>
 
     <div class="nav-menu" id="navMenu">
-      <a href="#inicio">Início</a>
+      <a href="#inicio" class="active">Início</a>
       <a href="#sobre">Sobre</a>
       <a href="#experiencia">Experiência</a>
       <a href="#especialidades">Skills</a>
@@ -30,49 +31,144 @@
       <a href="#contatos">Contato</a>
     </div>
 
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-actions">
+      <button type="button" class="tema-toggle" id="temaToggle" aria-label="Alternar tema">
+        <svg class="icon-sol" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-lua" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO - SIDE BY SIDE -->
   <main id="inicio" class="hero">
     <div class="hero-content">
       <div class="hero-text fade-up">
-        <span class="hero-label">Olá, eu sou</span>
+        <span class="hero-label">Desenvolvedor Web</span>
         <h1 class="hero-nome">Luis Felipe<br><span>Custódio Barbosa</span></h1>
         <p class="hero-desc">Desenvolvedor Web com experiência prática em PHP, MySQL e JavaScript, atuando na manutenção e evolução de sistemas web. Domínio de versionamento com Git, manipulação de banco de dados, integração entre front-end e back-end e organização de código orientado a boas práticas.</p>
 
-        <div class="hero-sociais">
-          <a href="https://github.com/Luisbarbosa06" target="_blank" aria-label="GitHub">
-            <img src="github22.png" alt="github">
+        <div class="hero-botoes">
+          <a href="assets/cv_2026.pdf" download class="botao-curriculo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Baixar CV
           </a>
-          <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank" aria-label="LinkedIn">
-            <img src="linkedin22.png" alt="linkedin">
-          </a>
-          <a href="https://wa.me/+5524999230188" target="_blank" aria-label="WhatsApp">
-            <img src="whatsapp22.png" alt="whatsapp">
+          <a href="#projetos" class="botao-projetos">
+            Ver projetos
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
           </a>
         </div>
 
-        <a href="assets/luis.pdf" download class="botao-curriculo">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          Baixar CV
-        </a>
+        <div class="hero-sociais">
+          <a href="https://github.com/Luisbarbosa06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-1.96c-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.95.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39s1.97.13 2.89.39c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.18c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/+5524999230188" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+          <a href="mailto:luisbarbosa.dev06@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="hero-foto fade-up">
+        <div class="foto-decor foto-decor-tl"></div>
+        <div class="foto-decor foto-decor-br"></div>
         <div class="foto-wrapper">
-          <img src="fotoperfil3.jpeg" alt="Foto de Luis Felipe" class="foto-perfil">
-          <div class="foto-anel"></div>
+          <div class="foto-glow"></div>
+          <img src="fotoperfil4.png" alt="Foto de Luis Felipe" class="foto-perfil">
         </div>
-        <div class="foto-badge">Front-end Developer</div>
+      </div>
+    </div>
+
+    <div class="hero-stats fade-up">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-numero">2+</span>
+          <span class="stat-label">Anos de experiência</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-numero">15+</span>
+          <span class="stat-label">Projetos concluídos</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+            <path d="M4 22h16"/>
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-numero">100%</span>
+          <span class="stat-label">Comprometimento</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+          </svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-numero">Sempre</span>
+          <span class="stat-label">Evoluindo</span>
+        </div>
       </div>
     </div>
   </main>
@@ -253,145 +349,358 @@
   <!-- PROJETOS COM CAROUSEL -->
   <section id="projetos" class="projetos">
     <div class="secao-container">
-      <div class="secao-header scroll-reveal">
-        <span class="secao-label">// portfólio</span>
-        <h2 class="secao-titulo">Últimos <span>Projetos</span></h2>
+      <div class="projetos-header scroll-reveal">
+        <div class="projetos-header-texto">
+          <span class="secao-label">// portfólio</span>
+          <h2 class="secao-titulo">Últimos <span>Projetos</span></h2>
+          <p class="projetos-subtitulo">Selecionados que representam minha jornada como desenvolvedor e meu foco em criar soluções reais.</p>
+        </div>
+        <a href="https://github.com/Luisbarbosa06" target="_blank" rel="noopener noreferrer" class="botao-ver-todos">
+          Ver todos os projetos
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"/>
+            <polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </a>
       </div>
 
       <div class="carousel">
-        <button class="carousel-btn carousel-btn-prev" aria-label="Anterior">&#10094;</button>
+        <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
 
         <div class="carousel-viewport">
           <div class="carousel-track">
 
             <div class="projetos-card">
-              <a href="https://github.com/Luisbarbosa06/Projeto---Sorveteria" target="_blank" class="projeto-link">
-                <div class="projeto-imagem-container">
-                  <img src="Layout-inicial1.png" alt="Projeto Gelateria" class="projetos-imagem">
-                  <div class="projeto-overlay">
-                    <span>Ver Projeto</span>
-                  </div>
-                </div>
-              </a>
+              <div class="projeto-imagem-container">
+                <span class="projeto-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
+                <img src="Layout-inicial1.png" alt="Projeto Gelateria" class="projetos-imagem">
+              </div>
               <div class="caixa-texto-projeto">
-                <h3 class="info-projetos">Gelateria</h3>
+                <h3 class="info-projetos">Sorvete Artesanal</h3>
+                <p class="paragrafo-projetos">Site institucional para uma sorveteria artesanal com foco em experiência do usuário e design responsivo.</p>
                 <div class="projeto-tags">
                   <span class="tag">React</span>
                   <span class="tag">App Router</span>
                 </div>
-                <p class="paragrafo-projetos">Projeto criado em React sobre uma sorveteria, utilizando o recurso App Router para criar uma aplicação com múltiplas páginas e navegação entre rotas.</p>
+                <a href="https://github.com/Luisbarbosa06/Projeto---Sorveteria" target="_blank" rel="noopener noreferrer" class="projeto-link-bottom">
+                  Ver projeto
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
               </div>
             </div>
 
             <div class="projetos-card">
               <div class="projeto-imagem-container">
+                <span class="projeto-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
                 <img src="rastreio.png" alt="Sistema de Rastreamento FarmaUSA" class="projetos-imagem">
               </div>
               <div class="caixa-texto-projeto">
                 <h3 class="info-projetos">Rastreamento FarmaUSA</h3>
+                <p class="paragrafo-projetos">Sistema web para rastreamento de envios de medicamentos importados com timeline em tempo real e notificações.</p>
                 <div class="projeto-tags">
                   <span class="tag">PHP</span>
                   <span class="tag">MySQL</span>
                   <span class="tag">JavaScript</span>
-                  <span class="tag">Bootstrap 5</span>
+                  <span class="tag">Bootstrap</span>
                   <span class="tag">API REST</span>
                 </div>
-                <p class="paragrafo-projetos">Sistema web de rastreamento de envios de medicamentos importados para a FarmaUSA. Permite que pacientes acompanhem pedidos em tempo real através de uma timeline visual, desde o pagamento até a entrega final.</p>
+                <span class="projeto-link-bottom projeto-link-bottom--disabled">
+                  Ver projeto
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </span>
               </div>
             </div>
 
             <div class="projetos-card">
-              <a href="https://minhacarteira-finan.vercel.app/login" target="_blank" class="projeto-link">
-                <div class="projeto-imagem-container">
-                  <img src="projeto4.jpeg" alt="Projeto Dashboard" class="projetos-imagem">
-                  <div class="projeto-overlay">
-                    <span>Ver Projeto</span>
-                  </div>
-                </div>
-              </a>
+              <div class="projeto-imagem-container">
+                <span class="projeto-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
+                <img src="projeto4.jpeg" alt="Projeto Dashboard" class="projetos-imagem">
+              </div>
               <div class="caixa-texto-projeto">
                 <h3 class="info-projetos">Dashboard de Finanças</h3>
+                <p class="paragrafo-projetos">Aplicação para controle financeiro pessoal com gráficos interativos e relatórios detalhados.</p>
                 <div class="projeto-tags">
                   <span class="tag">React</span>
                   <span class="tag">TypeScript</span>
                   <span class="tag">Supabase</span>
                   <span class="tag">Vite</span>
                 </div>
-                <p class="paragrafo-projetos">Aplicação web de gerenciamento financeiro pessoal que permite controlar receitas, despesas e metas de economia com gráficos interativos.</p>
+                <a href="https://minhacarteira-finan.vercel.app/login" target="_blank" rel="noopener noreferrer" class="projeto-link-bottom">
+                  Ver projeto
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
               </div>
             </div>
 
             <div class="projetos-card">
-              <a href="https://github.com/Luisbarbosa06/Cafeteria-Manhattan" target="_blank" class="projeto-link">
-                <div class="projeto-imagem-container">
-                  <img src="Cafeteria2.jpeg" alt="Projeto Cafeteria" class="projetos-imagem">
-                  <div class="projeto-overlay">
-                    <span>Ver Projeto</span>
-                  </div>
-                </div>
-              </a>
+              <div class="projeto-imagem-container">
+                <span class="projeto-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
+                <img src="Cafeteria2.jpeg" alt="Projeto Cafeteria" class="projetos-imagem">
+              </div>
               <div class="caixa-texto-projeto">
                 <h3 class="info-projetos">Cafeteria Manhattan</h3>
+                <p class="paragrafo-projetos">Uma cafeteria com alma nova-iorquina e um site à altura. Layout moderno e experiência acolhedora.</p>
                 <div class="projeto-tags">
                   <span class="tag">HTML5</span>
                   <span class="tag">CSS3</span>
                   <span class="tag">Responsivo</span>
                 </div>
-                <p class="paragrafo-projetos">Uma cafeteria com alma nova-iorquina e um site à altura. Layout moderno e experiência acolhedora.</p>
+                <a href="https://github.com/Luisbarbosa06/Cafeteria-Manhattan" target="_blank" rel="noopener noreferrer" class="projeto-link-bottom">
+                  Ver projeto
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
               </div>
             </div>
 
             <div class="projetos-card">
-              <a href="https://github.com/Luisbarbosa06/Petshop/tree/main/petshop" target="_blank" class="projeto-link">
-                <div class="projeto-imagem-container">
-                  <img src="Pestshop2.jpeg" alt="Projeto Petshop" class="projetos-imagem">
-                  <div class="projeto-overlay">
-                    <span>Ver Projeto</span>
-                  </div>
-                </div>
-              </a>
+              <div class="projeto-imagem-container">
+                <span class="projeto-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </span>
+                <img src="Pestshop2.jpeg" alt="Projeto Petshop" class="projetos-imagem">
+              </div>
               <div class="caixa-texto-projeto">
                 <h3 class="info-projetos">Petshop Shalom</h3>
+                <p class="paragrafo-projetos">Site para um petshop, criado com HTML e CSS, apresentando serviços como banho, tosa e venda de produtos.</p>
                 <div class="projeto-tags">
                   <span class="tag">HTML5</span>
                   <span class="tag">CSS3</span>
                 </div>
-                <p class="paragrafo-projetos">Site para um petshop, criado com HTML e CSS, apresentando serviços como banho, tosa e venda de produtos.</p>
+                <a href="https://github.com/Luisbarbosa06/Petshop/tree/main/petshop" target="_blank" rel="noopener noreferrer" class="projeto-link-bottom">
+                  Ver projeto
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/>
+                    <polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </a>
               </div>
             </div>
 
           </div>
         </div>
 
-        <button class="carousel-btn carousel-btn-next" aria-label="Próximo">&#10095;</button>
+        <button type="button" class="carousel-btn carousel-btn-next" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
       </div>
 
       <div class="carousel-dots" id="carouselDots"></div>
+
+      <div class="projetos-stats scroll-reveal">
+        <div class="proj-stat-item">
+          <div class="proj-stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="proj-stat-info">
+            <span class="proj-stat-numero">15+</span>
+            <span class="proj-stat-label">Projetos concluídos</span>
+          </div>
+        </div>
+
+        <div class="proj-stat-item">
+          <div class="proj-stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+            </svg>
+          </div>
+          <div class="proj-stat-info">
+            <span class="proj-stat-numero">Soluções</span>
+            <span class="proj-stat-label">Focadas em resultados</span>
+          </div>
+        </div>
+
+        <div class="proj-stat-item">
+          <div class="proj-stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="proj-stat-info">
+            <span class="proj-stat-numero">Performance</span>
+            <span class="proj-stat-label">Código otimizado</span>
+          </div>
+        </div>
+
+        <div class="proj-stat-item">
+          <div class="proj-stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="proj-stat-info">
+            <span class="proj-stat-numero">Qualidade</span>
+            <span class="proj-stat-label">Boas práticas</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTATO -->
   <section id="contatos" class="contatos">
     <div class="secao-container">
-      <div class="secao-header scroll-reveal">
-        <span class="secao-label">// contato</span>
-        <h2 class="secao-titulo">Entre em <span>Contato</span></h2>
-      </div>
+      <div class="contato-grid">
+        <div class="contato-info scroll-reveal">
+          <span class="secao-label">// contato</span>
+          <h2 class="secao-titulo">Entre em <span>Contato</span></h2>
+          <p class="contato-desc">Vamos conversar sobre projetos, oportunidades ou parcerias. Estou sempre aberto a novas ideias e desafios que geram impacto.</p>
 
-      <form class="formulario-contato scroll-reveal" id="formulario" onsubmit="enviarWhats(event)">
-        <div class="grupo-form">
-          <input placeholder="Nome" class="campo-form" id="nome">
+          <div class="contato-cards">
+            <a href="https://wa.me/+5524999230188" target="_blank" rel="noopener noreferrer" class="contato-card">
+              <div class="contato-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </div>
+              <div class="contato-card-info">
+                <span class="contato-card-label">WhatsApp</span>
+                <span class="contato-card-valor">+55 (24) 99923-0188</span>
+              </div>
+              <svg class="contato-card-seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+
+            <a href="mailto:luisbarbosa.dev06@gmail.com" class="contato-card">
+              <div class="contato-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contato-card-info">
+                <span class="contato-card-label">E-mail</span>
+                <span class="contato-card-valor">sdluisbarbosa@gmail.com</span>
+              </div>
+              <svg class="contato-card-seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/>
+                <polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+
+            <div class="contato-card contato-card--static">
+              <div class="contato-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contato-card-info">
+                <span class="contato-card-label">Localização</span>
+                <span class="contato-card-valor">Barra Mansa - RJ, Brasil</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contato-status">
+            <span class="status-dot"></span>
+            <span>Disponível para novos projetos</span>
+          </div>
         </div>
-        <div class="grupo-form">
-          <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
-        </div>
-        <button type="submit" class="botao-form">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Enviar WhatsApp
-        </button>
-      </form>
+
+        <form class="formulario-contato scroll-reveal" id="formulario" onsubmit="enviarWhats(event)">
+          <div class="form-header">
+            <div class="form-header-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="form-titulo">Envie uma mensagem</h3>
+              <p class="form-subtitulo">Preencha o formulário e entrarei em contato.</p>
+            </div>
+          </div>
+
+          <div class="grupo-form">
+            <span class="campo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input placeholder="Nome" class="campo-form" id="nome">
+          </div>
+          <div class="grupo-form">
+            <span class="campo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+            <input type="email" placeholder="E-mail" class="campo-form" id="email">
+          </div>
+          <div class="grupo-form grupo-form--textarea">
+            <span class="campo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </span>
+            <textarea class="campo-form" placeholder="Digite sua mensagem..." rows="5" id="mensagem"></textarea>
+          </div>
+          <button type="submit" class="botao-form">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Enviar via WhatsApp
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+          <p class="form-aviso">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Seus dados estão protegidos. Não compartilhamos informações.
+          </p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -399,14 +708,20 @@
   <footer class="texto-rodape">
     <div class="rodape-conteudo">
       <div class="rodape-sociais">
-        <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank">
-          <img src="linkedin22.png" alt="linkedin">
+        <a href="https://www.linkedin.com/in/luis-felipe-barbosa-199456227/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.01-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+          </svg>
         </a>
-        <a href="https://github.com/Luisbarbosa06" target="_blank">
-          <img src="github22.png" alt="github">
+        <a href="https://github.com/Luisbarbosa06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-1.96c-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.95.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.39s1.97.13 2.89.39c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.18c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
         </a>
-        <a href="https://wa.me/+5524999230188" target="_blank">
-          <img src="whatsapp22.png" alt="whatsapp">
+        <a href="https://wa.me/+5524999230188" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
         </a>
       </div>
       <p>&copy; 2026 Portfólio - Desenvolvido por Luis Felipe Barbosa</p>
@@ -441,6 +756,15 @@
       });
     });
 
+    // ===== TEMA TOGGLE =====
+    const temaToggle = document.getElementById('temaToggle');
+    const temaSalvo = localStorage.getItem('tema');
+    if (temaSalvo === 'light') document.body.classList.add('light');
+    temaToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      localStorage.setItem('tema', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+
     // ===== NAVBAR SCROLL =====
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -465,17 +789,21 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
 
-    // ===== CAROUSEL =====
+    // ===== CAROUSEL (LOOP INFINITO) =====
     const track = document.querySelector('.carousel-track');
-    const cards = document.querySelectorAll('.carousel-track .projetos-card');
+    const realCards = Array.from(track.children);
+    const totalReal = realCards.length;
     const prevBtn = document.querySelector('.carousel-btn-prev');
     const nextBtn = document.querySelector('.carousel-btn-next');
     const dotsContainer = document.getElementById('carouselDots');
     const viewportEl = document.querySelector('.carousel-viewport');
 
-    let currentIndex = 0;
-    let cardsPerView = getCardsPerView();
     const gap = 24;
+    let cardsPerView = getCardsPerView();
+    let bufferCount = cardsPerView;
+    let domIndex = 0;
+    let realIndex = 0;
+    let isAnimating = false;
 
     function getCardsPerView() {
       if (window.innerWidth <= 600) return 1;
@@ -483,18 +811,30 @@
       return 3;
     }
 
+    function setupClones() {
+      Array.from(track.querySelectorAll('.clone')).forEach(c => c.remove());
+      bufferCount = cardsPerView;
+      for (let i = 1; i <= bufferCount; i++) {
+        const clone = realCards[totalReal - i].cloneNode(true);
+        clone.classList.add('clone');
+        track.insertBefore(clone, track.firstChild);
+      }
+      for (let i = 0; i < bufferCount; i++) {
+        const clone = realCards[i].cloneNode(true);
+        clone.classList.add('clone');
+        track.appendChild(clone);
+      }
+      domIndex = bufferCount + realIndex;
+    }
+
     function getCardWidth() {
       const viewportWidth = viewportEl.offsetWidth;
       return (viewportWidth - gap * (cardsPerView - 1)) / cardsPerView;
     }
 
-    function getTotalSlides() {
-      return Math.max(1, cards.length - cardsPerView + 1);
-    }
-
     function sizeCards() {
       const w = getCardWidth();
-      cards.forEach(card => {
+      Array.from(track.children).forEach(card => {
         card.style.minWidth = w + 'px';
         card.style.maxWidth = w + 'px';
       });
@@ -502,34 +842,67 @@
 
     function buildDots() {
       dotsContainer.innerHTML = '';
-      for (let i = 0; i < getTotalSlides(); i++) {
+      for (let i = 0; i < totalReal; i++) {
         const dot = document.createElement('button');
         dot.classList.add('carousel-dot');
-        if (i === currentIndex) dot.classList.add('active');
+        if (i === realIndex) dot.classList.add('active');
         dot.setAttribute('aria-label', `Slide ${i + 1}`);
         dot.addEventListener('click', () => goToSlide(i));
         dotsContainer.appendChild(dot);
       }
     }
 
-    function updateCarousel() {
-      sizeCards();
-      const offset = currentIndex * (getCardWidth() + gap);
-      track.style.transform = `translateX(-${offset}px)`;
-      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
+    function applyTranslate(animate) {
+      const cardW = getCardWidth();
+      const viewportW = viewportEl.offsetWidth;
+      const cardCenterPos = domIndex * (cardW + gap) + cardW / 2;
+      const targetTranslate = viewportW / 2 - cardCenterPos;
+      track.style.transition = animate ? 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none';
+      track.style.transform = `translateX(${targetTranslate}px)`;
+    }
+
+    function updateFocusedAndDots() {
+      Array.from(track.children).forEach((card, i) => {
+        card.classList.toggle('is-focused', i === domIndex);
       });
-      prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
-      nextBtn.style.opacity = currentIndex >= getTotalSlides() - 1 ? '0.3' : '1';
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === realIndex);
+      });
     }
 
-    function goToSlide(index) {
-      currentIndex = Math.max(0, Math.min(index, getTotalSlides() - 1));
-      updateCarousel();
+    function advance(delta) {
+      if (delta === 0 || isAnimating) return;
+      isAnimating = true;
+      domIndex += delta;
+      realIndex = ((realIndex + delta) % totalReal + totalReal) % totalReal;
+      applyTranslate(true);
+      updateFocusedAndDots();
     }
 
-    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    function goToSlide(targetReal) {
+      if (isAnimating) return;
+      let delta = targetReal - realIndex;
+      if (delta > totalReal / 2) delta -= totalReal;
+      if (delta < -totalReal / 2) delta += totalReal;
+      advance(delta);
+    }
+
+    track.addEventListener('transitionend', (e) => {
+      if (e.propertyName !== 'transform') return;
+      if (domIndex >= bufferCount + totalReal) {
+        domIndex -= totalReal;
+        applyTranslate(false);
+        requestAnimationFrame(updateFocusedAndDots);
+      } else if (domIndex < bufferCount) {
+        domIndex += totalReal;
+        applyTranslate(false);
+        requestAnimationFrame(updateFocusedAndDots);
+      }
+      isAnimating = false;
+    });
+
+    prevBtn.addEventListener('click', () => advance(-1));
+    nextBtn.addEventListener('click', () => advance(1));
 
     let touchStartX = 0;
     viewportEl.addEventListener('touchstart', (e) => {
@@ -538,19 +911,24 @@
     viewportEl.addEventListener('touchend', (e) => {
       const diff = touchStartX - e.changedTouches[0].screenX;
       if (Math.abs(diff) > 50) {
-        diff > 0 ? goToSlide(currentIndex + 1) : goToSlide(currentIndex - 1);
+        diff > 0 ? advance(1) : advance(-1);
       }
     }, { passive: true });
 
     window.addEventListener('resize', () => {
       cardsPerView = getCardsPerView();
-      if (currentIndex >= getTotalSlides()) currentIndex = getTotalSlides() - 1;
+      setupClones();
+      sizeCards();
       buildDots();
-      updateCarousel();
+      applyTranslate(false);
+      updateFocusedAndDots();
     });
 
+    setupClones();
+    sizeCards();
     buildDots();
-    updateCarousel();
+    applyTranslate(false);
+    updateFocusedAndDots();
   </script>
 
 </body>
