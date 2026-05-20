@@ -1,0 +1,603 @@
+/* ============================================
+   MODAL DE PROJETO
+   Integrado à identidade visual do portfólio
+   (tema escuro padrão + suporte a tema claro)
+   ============================================ */
+
+/* ----- Cards clicáveis ----- */
+.projetos-card[data-project] {
+    cursor: pointer;
+}
+
+.carousel-track .projetos-card[data-project]:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+.projetos-card[data-project]:focus-visible {
+    outline: 2px solid #7c3aed;
+    outline-offset: 3px;
+}
+
+/* indicador "Ver detalhes" reagindo ao hover do card */
+.projeto-link-detalhes {
+    cursor: pointer;
+}
+
+.projetos-card[data-project]:hover .projeto-link-detalhes {
+    color: #c4b5fd;
+    gap: 10px;
+}
+
+/* ----- Container / Overlay ----- */
+.modal-projeto {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+}
+
+.modal-projeto.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.35s ease, visibility 0s linear 0s;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 8, 18, 0.8);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+/* ----- Painel ----- */
+.modal-conteudo {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #111a2e;
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    transform: translateY(40px) scale(0.97);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+}
+
+.modal-projeto.is-open .modal-conteudo {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.modal-conteudo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-conteudo::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-conteudo::-webkit-scrollbar-thumb {
+    background: rgba(124, 58, 237, 0.4);
+    border-radius: 8px;
+}
+
+/* ----- Botão fechar ----- */
+.modal-fechar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(11, 17, 32, 0.7);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #e2e8f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.modal-fechar:hover {
+    background: rgba(124, 58, 237, 0.9);
+    border-color: rgba(124, 58, 237, 0.9);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* ----- Capa ----- */
+.modal-capa {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #0b1120;
+    cursor: zoom-in;
+}
+
+.modal-capa-zoom {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: rgba(11, 17, 32, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #e2e8f0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.modal-capa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* ----- Galeria (miniaturas) ----- */
+.modal-galeria {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 2rem 0;
+}
+
+.modal-galeria-thumb {
+    width: 74px;
+    height: 52px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: #0b1120;
+    padding: 0;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-galeria-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.modal-galeria-thumb:hover {
+    transform: translateY(-2px);
+}
+
+.modal-galeria-thumb.is-active {
+    border-color: #7c3aed;
+}
+
+/* ----- Corpo ----- */
+.modal-corpo {
+    padding: 1.8rem 2rem 2rem;
+}
+
+/* ----- Cabeçalho ----- */
+.modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 13px;
+    border-radius: 50px;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: #a78bfa;
+    margin-bottom: 12px;
+}
+
+.modal-badge::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.modal-badge--live {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.35);
+    color: #4ade80;
+}
+
+.modal-badge--live::before {
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    animation: modalPulso 2s ease-in-out infinite;
+}
+
+@keyframes modalPulso {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
+    50%      { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.07); }
+}
+
+.modal-titulo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.modal-subtitulo {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #a78bfa;
+    margin-bottom: 1.5rem;
+}
+
+/* ----- Descrição ----- */
+.modal-descricao {
+    margin-bottom: 1.9rem;
+}
+
+.modal-descricao p {
+    font-size: 0.93rem;
+    line-height: 1.75;
+    color: rgba(226, 232, 240, 0.7);
+    margin-bottom: 0.9rem;
+}
+
+.modal-descricao p:last-child {
+    margin-bottom: 0;
+}
+
+/* ----- Seções ----- */
+.modal-secao {
+    margin-bottom: 1.9rem;
+}
+
+.modal-secao-titulo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+    padding-left: 12px;
+    border-left: 3px solid #7c3aed;
+}
+
+/* ----- Lista "O que foi construído" ----- */
+.modal-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+}
+
+.modal-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(226, 232, 240, 0.7);
+}
+
+.modal-feature-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
+    border-radius: 50%;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: #a78bfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- Tecnologias (reutiliza .projeto-tags / .tag do style.css) ----- */
+#modalStack {
+    margin: 0;
+}
+
+/* ----- Links ----- */
+.modal-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.modal-btn {
+    flex: 1;
+    min-width: 190px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0.9rem 1.4rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.modal-btn--primario {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}
+
+.modal-btn--primario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(124, 58, 237, 0.5);
+}
+
+.modal-btn--secundario {
+    background: transparent;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.modal-btn--secundario:hover {
+    background: rgba(124, 58, 237, 0.12);
+    border-color: rgba(124, 58, 237, 0.45);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ----- Trava de scroll do body ----- */
+body.modal-aberto {
+    overflow: hidden;
+}
+
+/* ============================================
+   LIGHTBOX — imagem ampliada
+   ============================================ */
+.modal-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background: rgba(5, 8, 18, 0.93);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.modal-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.modal-lightbox-img {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.modal-lightbox.is-open .modal-lightbox-img {
+    transform: scale(1);
+}
+
+.modal-lightbox-fechar,
+.modal-lightbox-nav {
+    position: fixed;
+    z-index: 2;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(11, 17, 32, 0.85);
+    color: #e2e8f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.modal-lightbox-fechar {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+}
+
+.modal-lightbox-fechar:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.modal-lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+}
+
+.modal-lightbox-nav:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+.modal-lightbox-prev { left: 16px; }
+.modal-lightbox-next { right: 16px; }
+
+.modal-lightbox-contador {
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    padding: 6px 15px;
+    border-radius: 50px;
+    background: rgba(11, 17, 32, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .modal-lightbox {
+        padding: 3.5rem 0.6rem;
+    }
+
+    .modal-lightbox-nav {
+        width: 38px;
+        height: 38px;
+    }
+
+    .modal-lightbox-prev { left: 8px; }
+    .modal-lightbox-next { right: 8px; }
+}
+
+/* ============================================
+   TEMA CLARO
+   ============================================ */
+body.light .modal-overlay {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+body.light .modal-conteudo {
+    background: #ffffff;
+    border-color: rgba(124, 58, 237, 0.25);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.25);
+}
+
+body.light .modal-fechar {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(30, 41, 59, 0.15);
+    color: #1e293b;
+}
+
+body.light .modal-fechar:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+body.light .modal-capa,
+body.light .modal-galeria-thumb {
+    background: #f5f6fb;
+}
+
+body.light .modal-titulo {
+    color: #0f172a;
+}
+
+body.light .modal-subtitulo {
+    color: #6d28d9;
+}
+
+body.light .modal-descricao p,
+body.light .modal-features li {
+    color: rgba(30, 41, 59, 0.72);
+}
+
+body.light .modal-secao-titulo {
+    color: #0f172a;
+}
+
+body.light .modal-btn--secundario {
+    color: #1e293b;
+    border-color: rgba(30, 41, 59, 0.18);
+}
+
+body.light .modal-btn--secundario:hover {
+    color: #6d28d9;
+    background: rgba(124, 58, 237, 0.08);
+    border-color: rgba(124, 58, 237, 0.4);
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+@media (max-width: 600px) {
+    .modal-projeto {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .modal-conteudo {
+        max-width: 100%;
+        max-height: 94vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .modal-capa {
+        height: 190px;
+    }
+
+    .modal-galeria {
+        padding: 12px 1.3rem 0;
+    }
+
+    .modal-corpo {
+        padding: 1.5rem 1.3rem 1.7rem;
+    }
+
+    .modal-titulo {
+        font-size: 1.35rem;
+    }
+
+    .modal-btn {
+        min-width: 100%;
+    }
+}
+
+/* ----- Acessibilidade: movimento reduzido ----- */
+@media (prefers-reduced-motion: reduce) {
+    .modal-projeto,
+    .modal-conteudo {
+        transition-duration: 0.01ms !important;
+    }
+
+    .modal-fechar:hover {
+        transform: none;
+    }
+
+    .modal-badge--live::before {
+        animation: none;
+    }
+}
