@@ -14,6 +14,26 @@
      --------------------------------------------- */
   const projects = [
     {
+      id: "igor-dados",
+      name: "Portfólio Igor Souza",
+      subtitle: "Consultor & Especialista em Dados",
+      badge: "Projeto online",
+      cover: "Portfolio_igor.png",
+      description: [
+        "Portfólio profissional de Igor Souza, Consultor & Especialista em Dados com mais de 6 anos de experiência.",
+        "Voltado para áreas de Comercial, Estoque e Operações que precisam decidir com base em fatos, transformando dados em informação clara para a tomada de decisão."
+      ],
+      features: [
+        "Apresentação da trajetória e especialidades em dados aplicados ao negócio",
+        "Foco em decisões orientadas por dados nas áreas Comercial, Estoque e Operações",
+        "Layout moderno e responsivo, hospedado na Vercel",
+        "Vitrine de projetos e resultados em análise de dados"
+      ],
+      liveUrl: "https://portfolioigorsouza.vercel.app/",
+      githubUrl: "",
+      stack: ["Análise de Dados", "Power BI", "SQL", "Dashboards"]
+    },
+    {
       id: "enterbras",
       name: "Enterbras Enterprise Inc.",
       subtitle: "Plataforma de E-commerce de Armas de Fogo — EUA",
