@@ -879,6 +879,42 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.scroll-reveal').forEach(el => revealObserver.observe(el));
 
+    // ===== SOBRE: revelação letra por letra =====
+    const sobreTexto = document.querySelector('.sobre-texto');
+    if (sobreTexto) {
+      sobreTexto.querySelectorAll('p').forEach((p, pIndex) => {
+        const palavras = p.textContent.split(' ');
+        p.textContent = '';
+        let charIndex = 0;
+        palavras.forEach((palavra, wIndex) => {
+          const wordSpan = document.createElement('span');
+          wordSpan.className = 'word';
+          for (const ch of palavra) {
+            const charSpan = document.createElement('span');
+            charSpan.className = 'char';
+            charSpan.textContent = ch;
+            charSpan.style.transitionDelay = (pIndex * 120 + charIndex * 7) + 'ms';
+            wordSpan.appendChild(charSpan);
+            charIndex++;
+          }
+          p.appendChild(wordSpan);
+          if (wIndex < palavras.length - 1) {
+            p.appendChild(document.createTextNode(' '));
+          }
+        });
+      });
+
+      const charObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('chars-revealed');
+            charObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      charObserver.observe(sobreTexto);
+    }
+
     // ===== CAROUSEL (LOOP INFINITO) =====
     const track = document.querySelector('.carousel-track');
     const realCards = Array.from(track.children);

@@ -494,6 +494,23 @@ body.light .tema-toggle .icon-lua { display: block; }
     color: #e2e8f0;
 }
 
+/* Revelação letra por letra ao rolar */
+.sobre-texto .word {
+    display: inline-block;
+}
+
+.sobre-texto .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.sobre-texto.chars-revealed .char {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .sobre-info {
     display: flex;
     flex-direction: column;
@@ -530,12 +547,29 @@ body.light .tema-toggle .icon-lua { display: block; }
 }
 
 .exp-timeline {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Linha central da timeline */
+.exp-timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.6), rgba(124, 58, 237, 0.08));
 }
 
 .exp-card {
+    position: relative;
+    width: calc(50% - 32px);
     display: flex;
     gap: 20px;
     padding: 1.8rem;
@@ -543,13 +577,61 @@ body.light .tema-toggle .icon-lua { display: block; }
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-left: 3px solid #7c3aed;
     border-radius: 14px;
-    transition: all 0.25s ease;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.45s ease, opacity 0.45s ease;
+}
+
+/* Cards ímpares à esquerda, pares à direita */
+.exp-card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.exp-card:nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Marcador na linha central */
+.exp-card::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #7c3aed;
+    border: 3px solid #14111f;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+.exp-card:nth-child(odd)::after {
+    right: -40px;
+}
+
+.exp-card:nth-child(even)::after {
+    left: -40px;
 }
 
 .exp-card:hover {
     border-color: rgba(124, 58, 237, 0.4);
     border-left-color: #7c3aed;
     background: rgba(124, 58, 237, 0.03);
+}
+
+/* Reveal alternado: ímpar entra pela esquerda, par pela direita */
+.exp-card.scroll-reveal {
+    opacity: 0;
+}
+
+.exp-card:nth-child(odd).scroll-reveal {
+    transform: translateX(-45px);
+}
+
+.exp-card:nth-child(even).scroll-reveal {
+    transform: translateX(45px);
+}
+
+.exp-card.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .exp-icon {
@@ -1617,6 +1699,36 @@ body.light .nav-menu a {
         width: 36px;
         height: 36px;
         font-size: 0.95rem;
+    }
+
+    /* Timeline em coluna única (linha à esquerda) */
+    .exp-timeline::before {
+        left: 7px;
+        transform: none;
+    }
+
+    .exp-card,
+    .exp-card:nth-child(odd),
+    .exp-card:nth-child(even) {
+        width: 100%;
+        align-self: stretch;
+        margin-left: 28px;
+        width: calc(100% - 28px);
+    }
+
+    .exp-card:nth-child(odd)::after,
+    .exp-card:nth-child(even)::after {
+        left: -35px;
+        right: auto;
+    }
+
+    .exp-card:nth-child(odd).scroll-reveal,
+    .exp-card:nth-child(even).scroll-reveal {
+        transform: translateX(-30px);
+    }
+
+    .exp-card.scroll-reveal.revealed {
+        transform: translateX(0);
     }
 }
 
