@@ -14,6 +14,27 @@
      --------------------------------------------- */
   const projects = [
     {
+      id: "whatsapp-automacao",
+      name: "Automação Inteligente de Comunicação via WhatsApp",
+      subtitle: "Projeto Profissional",
+      badge: "Em produção",
+      cover: "api_farmausa.png",
+      description: [
+        "Sistema desenvolvido para automatizar a comunicação entre empresa e clientes por meio da integração com a API do WhatsApp via Fiel CRM.",
+        "Sempre que um pedido sofre alteração de status, o sistema dispara automaticamente uma mensagem personalizada ao cliente, eliminando processos manuais e garantindo uma comunicação rápida e padronizada.",
+        "A solução reduziu a necessidade de envio manual de mensagens, padronizou a comunicação com os clientes e automatizou a coleta de avaliações, proporcionando maior eficiência operacional e melhor experiência durante todo o processo de atendimento."
+      ],
+      features: [
+        "Integração com a API do WhatsApp via Fiel CRM",
+        "Disparo automático de mensagens personalizadas a cada alteração de status do pedido",
+        "Eliminação de processos manuais e padronização da comunicação com clientes",
+        "Automação da coleta de avaliações dos clientes"
+      ],
+      liveUrl: "",
+      githubUrl: "",
+      stack: ["PHP", "MySQL", "API REST", "WhatsApp API", "JSON", "JavaScript"]
+    },
+    {
       id: "enterbras",
       name: "Enterbras Enterprise Inc.",
       subtitle: "Plataforma de E-commerce de Armas de Fogo — EUA",
