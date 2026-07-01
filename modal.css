@@ -10,11 +10,11 @@
 }
 
 .carousel-track .projetos-card[data-project]:hover {
-    border-color: rgba(124, 58, 237, 0.4);
+    border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 .projetos-card[data-project]:focus-visible {
-    outline: 2px solid #7c3aed;
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .projetos-card[data-project]:hover .projeto-link-detalhes {
-    color: #c4b5fd;
+    color: var(--accent-pale);
     gap: 10px;
 }
 
@@ -65,8 +65,8 @@
     max-width: 700px;
     max-height: 90vh;
     overflow-y: auto;
-    background: #111a2e;
-    border: 1px solid rgba(124, 58, 237, 0.25);
+    background: var(--bg);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
     border-radius: 20px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
     transform: translateY(40px) scale(0.97);
@@ -88,7 +88,7 @@
 }
 
 .modal-conteudo::-webkit-scrollbar-thumb {
-    background: rgba(124, 58, 237, 0.4);
+    background: rgba(var(--accent-rgb), 0.4);
     border-radius: 8px;
 }
 
@@ -114,8 +114,8 @@
 }
 
 .modal-fechar:hover {
-    background: rgba(124, 58, 237, 0.9);
-    border-color: rgba(124, 58, 237, 0.9);
+    background: rgba(var(--accent-rgb), 0.9);
+    border-color: rgba(var(--accent-rgb), 0.9);
     color: #fff;
     transform: rotate(90deg);
 }
@@ -126,7 +126,7 @@
     width: 100%;
     height: 250px;
     overflow: hidden;
-    background: #0b1120;
+    background: var(--bg);
     cursor: zoom-in;
 }
 
@@ -171,7 +171,7 @@
     border-radius: 8px;
     overflow: hidden;
     border: 2px solid transparent;
-    background: #0b1120;
+    background: var(--bg);
     padding: 0;
     cursor: pointer;
     transition: border-color 0.2s ease, transform 0.2s ease;
@@ -190,7 +190,7 @@
 }
 
 .modal-galeria-thumb.is-active {
-    border-color: #7c3aed;
+    border-color: var(--accent);
 }
 
 /* ----- Corpo ----- */
@@ -210,9 +210,9 @@
     letter-spacing: 0.5px;
     padding: 5px 13px;
     border-radius: 50px;
-    background: rgba(124, 58, 237, 0.12);
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    color: #a78bfa;
+    background: rgba(var(--accent-rgb), 0.12);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    color: var(--accent-light);
     margin-bottom: 12px;
 }
 
@@ -251,7 +251,7 @@
 .modal-subtitulo {
     font-size: 0.95rem;
     font-weight: 500;
-    color: #a78bfa;
+    color: var(--accent-light);
     margin-bottom: 1.5rem;
 }
 
@@ -282,7 +282,7 @@
     color: #e2e8f0;
     margin-bottom: 1rem;
     padding-left: 12px;
-    border-left: 3px solid #7c3aed;
+    border-left: 3px solid var(--accent);
 }
 
 /* ----- Lista "O que foi construído" ----- */
@@ -309,9 +309,9 @@
     height: 22px;
     margin-top: 1px;
     border-radius: 50%;
-    background: rgba(124, 58, 237, 0.15);
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    color: #a78bfa;
+    background: rgba(var(--accent-rgb), 0.15);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    color: var(--accent-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,15 +346,15 @@
 }
 
 .modal-btn--primario {
-    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
     color: #fff;
     border: 1px solid transparent;
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+    box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.35);
 }
 
 .modal-btn--primario:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 10px 28px rgba(var(--accent-rgb), 0.5);
 }
 
 .modal-btn--secundario {
@@ -364,8 +364,8 @@
 }
 
 .modal-btn--secundario:hover {
-    background: rgba(124, 58, 237, 0.12);
-    border-color: rgba(124, 58, 237, 0.45);
+    background: rgba(var(--accent-rgb), 0.12);
+    border-color: rgba(var(--accent-rgb), 0.45);
     color: #fff;
     transform: translateY(-2px);
 }
@@ -441,8 +441,8 @@ body.modal-aberto {
 }
 
 .modal-lightbox-fechar:hover {
-    background: #7c3aed;
-    border-color: #7c3aed;
+    background: var(--accent);
+    border-color: var(--accent);
     color: #fff;
     transform: rotate(90deg);
 }
@@ -455,8 +455,8 @@ body.modal-aberto {
 }
 
 .modal-lightbox-nav:hover {
-    background: #7c3aed;
-    border-color: #7c3aed;
+    background: var(--accent);
+    border-color: var(--accent);
     color: #fff;
 }
 
@@ -501,7 +501,7 @@ body.light .modal-overlay {
 
 body.light .modal-conteudo {
     background: #ffffff;
-    border-color: rgba(124, 58, 237, 0.25);
+    border-color: rgba(var(--accent-rgb), 0.25);
     box-shadow: 0 30px 80px rgba(15, 23, 42, 0.25);
 }
 
@@ -512,8 +512,8 @@ body.light .modal-fechar {
 }
 
 body.light .modal-fechar:hover {
-    background: #7c3aed;
-    border-color: #7c3aed;
+    background: var(--accent);
+    border-color: var(--accent);
     color: #fff;
 }
 
@@ -523,11 +523,11 @@ body.light .modal-galeria-thumb {
 }
 
 body.light .modal-titulo {
-    color: #0f172a;
+    color: var(--accent-deep);
 }
 
 body.light .modal-subtitulo {
-    color: #6d28d9;
+    color: var(--accent-dark);
 }
 
 body.light .modal-descricao p,
@@ -536,7 +536,7 @@ body.light .modal-features li {
 }
 
 body.light .modal-secao-titulo {
-    color: #0f172a;
+    color: var(--accent-deep);
 }
 
 body.light .modal-btn--secundario {
@@ -545,9 +545,9 @@ body.light .modal-btn--secundario {
 }
 
 body.light .modal-btn--secundario:hover {
-    color: #6d28d9;
-    background: rgba(124, 58, 237, 0.08);
-    border-color: rgba(124, 58, 237, 0.4);
+    color: var(--accent-dark);
+    background: rgba(var(--accent-rgb), 0.08);
+    border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 /* ============================================
