@@ -134,8 +134,34 @@
       liveUrl: "",
       githubUrl: "https://github.com/Luisbarbosa06/Cafeteria-Manhattan",
       stack: ["HTML5", "CSS3", "Responsivo"]
+        },
+
+    {
+        id: "gunshow-turkey",
+        title: "GUNSHOW TURKEY",
+        subtitle: "Plataforma de E-commerce de Armas de Fogo — EUA X TURQUIA",
+        badge: "E-commerce",
+        cover: "gunshowturkey.png",
+        images: [
+            "gunshowturkey.png"
+        ],
+        description: `
+            Plataforma de e-commerce desenvolvida para conectar o mercado dos Estados Unidos e da Turquia,
+            com uma experiência moderna, responsiva e focada na apresentação e gerenciamento de produtos.
+        `,
+        features: [
+            "Plataforma de e-commerce responsiva",
+            "Catálogo e gerenciamento de produtos",
+            "Integração entre front-end e back-end",
+            "Integração com APIs REST",
+            "Interface moderna e otimizada",
+            "Estrutura preparada para o mercado internacional"
+        ],
+        liveUrl: "",
+        githubUrl: "",
+        stack: ["React", "TypeScript", "JavaScript", "Node.js", "PHP", "API REST"]
     }
-  ];
+];
 
   /* --------------------------------------------- */
 

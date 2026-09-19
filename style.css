@@ -28,6 +28,50 @@ body.light {
     --bg:                #f5f6fb;
 }
 
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    right: 18px;
+    bottom: 18px;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .whatsapp-float span {
+    display: none;
+  }
+}
+
 /* ====== RESET & BASE ====== */
 * {
     margin: 0;
