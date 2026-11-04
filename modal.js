@@ -14,6 +14,47 @@
      --------------------------------------------- */
   const projects = [
     {
+      id: "farmausa",
+      name: "Rastreamento FarmaUSA",
+      subtitle: "Sistema de rastreamento de envios de medicamentos",
+      badge: "Em produção",
+      cover: "rastreio.png",
+      description: [
+        "Sistema web para rastreamento de envios de medicamentos importados, com timeline em tempo real e notificações automáticas.",
+        "Desenvolvido para acompanhar cada etapa da entrega e manter o cliente informado de forma transparente."
+      ],
+      features: [
+        "Rastreamento em tempo real via API de transportadoras",
+        "Timeline visual de status do pedido",
+        "Notificações automáticas por e-mail",
+        "Dashboard administrativo para gestão de envios"
+      ],
+      liveUrl: "",
+      githubUrl: "",
+      stack: ["PHP", "MySQL", "JavaScript", "Bootstrap", "API REST"]
+    },
+    {
+      id: "financas",
+      name: "Dashboard de Finanças",
+      subtitle: "Aplicação de controle financeiro pessoal",
+      badge: "Projeto online",
+      cover: "dash.png",
+      gallery: ["dash.png", "dash2.png"],
+      description: [
+        "Aplicação para controle financeiro pessoal com gráficos interativos e relatórios detalhados.",
+        "Permite acompanhar receitas, despesas e a evolução do saldo de forma visual e organizada."
+      ],
+      features: [
+        "Autenticação de usuários e dados na nuvem com Supabase",
+        "Gráficos interativos de receitas e despesas",
+        "Relatórios financeiros detalhados",
+        "Interface responsiva construída com React e TypeScript"
+      ],
+      liveUrl: "https://minhacarteira-finan.vercel.app/login",
+      githubUrl: "",
+      stack: ["React", "TypeScript", "Supabase", "Vite"]
+    },
+    {
       id: "whatsapp-automacao",
       name: "Automação Inteligente de Comunicação via WhatsApp",
       subtitle: "Projeto Profissional",
@@ -58,86 +99,6 @@
       stack: ["React", "TypeScript", "JavaScript", "Node.js", "PHP", "API REST"]
     },
     {
-      id: "farmausa",
-      name: "Rastreamento FarmaUSA",
-      subtitle: "Sistema de rastreamento de envios de medicamentos",
-      badge: "Em produção",
-      cover: "rastreio.png",
-      description: [
-        "Sistema web para rastreamento de envios de medicamentos importados, com timeline em tempo real e notificações automáticas.",
-        "Desenvolvido para acompanhar cada etapa da entrega e manter o cliente informado de forma transparente."
-      ],
-      features: [
-        "Rastreamento em tempo real via API de transportadoras",
-        "Timeline visual de status do pedido",
-        "Notificações automáticas por e-mail",
-        "Dashboard administrativo para gestão de envios"
-      ],
-      liveUrl: "",
-      githubUrl: "",
-      stack: ["PHP", "MySQL", "JavaScript", "Bootstrap", "API REST"]
-    },
-    {
-      id: "financas",
-      name: "Dashboard de Finanças",
-      subtitle: "Aplicação de controle financeiro pessoal",
-      badge: "Projeto online",
-      cover: "dash.png",
-      gallery: ["dash.png", "dash2.png"],
-      description: [
-        "Aplicação para controle financeiro pessoal com gráficos interativos e relatórios detalhados.",
-        "Permite acompanhar receitas, despesas e a evolução do saldo de forma visual e organizada."
-      ],
-      features: [
-        "Autenticação de usuários e dados na nuvem com Supabase",
-        "Gráficos interativos de receitas e despesas",
-        "Relatórios financeiros detalhados",
-        "Interface responsiva construída com React e TypeScript"
-      ],
-      liveUrl: "https://minhacarteira-finan.vercel.app/login",
-      githubUrl: "",
-      stack: ["React", "TypeScript", "Supabase", "Vite"]
-    },
-    {
-      id: "sorvete",
-      name: "Sorvete Artesanal",
-      subtitle: "Site institucional para sorveteria artesanal",
-      badge: "Projeto concluído",
-      cover: "Layout-inicial1.png",
-      description: [
-        "Site institucional desenvolvido para uma sorveteria artesanal, com foco em experiência do usuário e design responsivo.",
-        "O projeto apresenta os produtos da marca com um layout moderno e navegação fluida em qualquer dispositivo."
-      ],
-      features: [
-        "Interface desenvolvida com React e componentização",
-        "Navegação entre páginas com App Router",
-        "Layout totalmente responsivo para mobile e desktop"
-      ],
-      liveUrl: "",
-      githubUrl: "https://github.com/Luisbarbosa06/Projeto---Sorveteria",
-      stack: ["React", "App Router", "JavaScript", "CSS3"]
-    },
-    {
-      id: "cafeteria",
-      name: "Cafeteria Manhattan",
-      subtitle: "Site institucional para cafeteria",
-      badge: "Projeto concluído",
-      cover: "Cafeteria2.jpeg",
-      description: [
-        "Site institucional para uma cafeteria com alma nova-iorquina.",
-        "Layout moderno e experiência acolhedora, com foco em transmitir a atmosfera da marca."
-      ],
-      features: [
-        "Layout moderno com identidade visual própria",
-        "Design totalmente responsivo",
-        "Estrutura semântica em HTML5 e CSS3"
-      ],
-      liveUrl: "",
-      githubUrl: "https://github.com/Luisbarbosa06/Cafeteria-Manhattan",
-      stack: ["HTML5", "CSS3", "Responsivo"]
-        },
-
-    {
         id: "gunshow-turkey",
         title: "GUNSHOW TURKEY",
         subtitle: "Plataforma de E-commerce de Armas de Fogo — EUA X TURQUIA",
@@ -161,7 +122,26 @@
         liveUrl: "",
         githubUrl: "",
         stack: ["React", "TypeScript", "JavaScript", "Node.js", "PHP", "API REST"]
-    }
+    },
+    {
+      id: "cafeteria",
+      name: "Cafeteria Manhattan",
+      subtitle: "Site institucional para cafeteria",
+      badge: "Projeto concluído",
+      cover: "Cafeteria2.jpeg",
+      description: [
+        "Site institucional para uma cafeteria com alma nova-iorquina.",
+        "Layout moderno e experiência acolhedora, com foco em transmitir a atmosfera da marca."
+      ],
+      features: [
+        "Layout moderno com identidade visual própria",
+        "Design totalmente responsivo",
+        "Estrutura semântica em HTML5 e CSS3"
+      ],
+      liveUrl: "",
+      githubUrl: "https://github.com/Luisbarbosa06/Cafeteria-Manhattan",
+      stack: ["HTML5", "CSS3", "Responsivo"]
+        }
 ];
 
   /* --------------------------------------------- */
