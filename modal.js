@@ -82,7 +82,8 @@
       name: "Dashboard de Finanças",
       subtitle: "Aplicação de controle financeiro pessoal",
       badge: "Projeto online",
-      cover: "projeto4.jpeg",
+      cover: "dash.png",
+      gallery: ["dash.png", "dash2.png"],
       description: [
         "Aplicação para controle financeiro pessoal com gráficos interativos e relatórios detalhados.",
         "Permite acompanhar receitas, despesas e a evolução do saldo de forma visual e organizada."
