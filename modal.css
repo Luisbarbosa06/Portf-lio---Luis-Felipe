@@ -507,8 +507,8 @@ body.light .modal-conteudo {
 
 body.light .modal-fechar {
     background: rgba(255, 255, 255, 0.9);
-    border-color: rgba(30, 41, 59, 0.15);
-    color: #1e293b;
+    border-color: rgba(125, 128, 107, 0.15);
+    color: #23271A;
 }
 
 body.light .modal-fechar:hover {
@@ -519,7 +519,7 @@ body.light .modal-fechar:hover {
 
 body.light .modal-capa,
 body.light .modal-galeria-thumb {
-    background: #f5f6fb;
+    background: #F4F0E9;
 }
 
 body.light .modal-titulo {
@@ -532,7 +532,7 @@ body.light .modal-subtitulo {
 
 body.light .modal-descricao p,
 body.light .modal-features li {
-    color: rgba(30, 41, 59, 0.72);
+    color: rgba(35, 39, 26, 0.92);
 }
 
 body.light .modal-secao-titulo {
@@ -540,8 +540,8 @@ body.light .modal-secao-titulo {
 }
 
 body.light .modal-btn--secundario {
-    color: #1e293b;
-    border-color: rgba(30, 41, 59, 0.18);
+    color: #23271A;
+    border-color: rgba(125, 128, 107, 0.18);
 }
 
 body.light .modal-btn--secundario:hover {
@@ -600,4 +600,28 @@ body.light .modal-btn--secundario:hover {
     .modal-badge--live::before {
         animation: none;
     }
+}
+
+/* Botões do modal — cor mais forte (tema claro) */
+body.light .modal-btn--primario {
+    background: linear-gradient(135deg, #2E3522 0%, #1A1E12 100%);
+    color: #F4F0E9;
+    box-shadow: 0 8px 22px rgba(26, 30, 18, 0.35);
+}
+
+body.light .modal-btn--primario:hover {
+    background: linear-gradient(135deg, #12150C 0%, #0B0D07 100%);
+    box-shadow: 0 12px 30px rgba(26, 30, 18, 0.5);
+}
+
+body.light .modal-btn--secundario {
+    color: #1A1E12;
+    border: 2px solid #1A1E12;
+    font-weight: 700;
+}
+
+body.light .modal-btn--secundario:hover {
+    background: #12150C;
+    border-color: #12150C;
+    color: #F4F0E9;
 }

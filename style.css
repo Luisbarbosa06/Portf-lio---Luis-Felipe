@@ -15,17 +15,17 @@
 }
 
 body.light {
-    /* Tema CLARO — teal / verde */
-    --accent:            #3bb7b7;
-    --accent-light:      #6fd0d0;
-    --accent-dark:       #2a8f8f;
-    --accent-deep:       #1a4b3d;
-    --accent-pale:       #a5dede;
-    --accent-rgb:        59, 183, 183;
-    --accent-light-rgb:  111, 208, 208;
-    --accent-dark-rgb:   42, 143, 143;
+    /* Tema CLARO — marfim com verde oliva */
+    --accent:            #3F4730;
+    --accent-light:      #4F5840;
+    --accent-dark:       #2E3522;
+    --accent-deep:       #23271A;
+    --accent-pale:       #C9CBBB;
+    --accent-rgb:        63, 71, 48;
+    --accent-light-rgb:  149, 152, 131;
+    --accent-dark-rgb:   46, 53, 34;
 
-    --bg:                #f5f6fb;
+    --bg:                #F4F0E9;
 }
 
 /* BOTÃO FLUTUANTE WHATSAPP */
@@ -125,25 +125,27 @@ body {
 /* ====== NAVBAR ====== */
 .nav-links {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(11, 17, 32, 0.5);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    top: 16px;
+    left: 32px;
+    right: 32px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.1rem 3rem;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
     transition: all 0.3s ease;
-    border-bottom: 1px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .nav-links.scrolled {
-    background: rgba(11, 17, 32, 0.95);
-    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(20, 20, 20, 0.6);
+    border-color: rgba(var(--accent-rgb), 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
 .portfolio {
@@ -173,8 +175,10 @@ body {
 }
 
 .nav-links a {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
     text-decoration: none;
     color: rgba(226, 232, 240, 0.7);
     position: relative;
@@ -1399,8 +1403,8 @@ body.light .tema-toggle .icon-lua { display: block; }
 
 /* ====== TEMA CLARO ====== */
 body.light {
-    background-color: #f5f6fb;
-    color: #1e293b;
+    background-color: #F4F0E9;
+    color: #23271A;
 }
 
 body.light .particulas {
@@ -1411,26 +1415,28 @@ body.light .particulas {
 
 /* Navbar */
 body.light .nav-links {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(244, 240, 233, 0.55);
+    border-color: rgba(125, 128, 107, 0.22);
+    box-shadow: 0 8px 32px rgba(125, 128, 107, 0.15);
 }
 
 body.light .nav-links.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid rgba(var(--accent-rgb), 0.15);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(244, 240, 233, 0.82);
+    border-color: rgba(125, 128, 107, 0.3);
+    box-shadow: 0 10px 40px rgba(125, 128, 107, 0.22);
 }
 
 body.light .logo-nome {
-    color: #1e293b;
+    color: #23271A;
 }
 
 body.light .nav-links a {
-    color: rgba(30, 41, 59, 0.65);
+    color: rgba(35, 39, 26, 0.85);
 }
 
 body.light .nav-links a:hover,
 body.light .nav-links a.active {
-    color: #1e293b;
+    color: #23271A;
 }
 
 body.light .tema-toggle {
@@ -1445,7 +1451,7 @@ body.light .tema-toggle:hover {
 }
 
 body.light .hamburger span {
-    background: #1e293b;
+    background: #23271A;
 }
 
 /* Hero */
@@ -1454,12 +1460,12 @@ body.light .hero-nome {
 }
 
 body.light .hero-desc {
-    color: rgba(30, 41, 59, 0.7);
+    color: rgba(35, 39, 26, 0.9);
 }
 
 body.light .botao-projetos {
-    color: #1e293b;
-    border-color: rgba(30, 41, 59, 0.18);
+    color: #23271A;
+    border-color: rgba(125, 128, 107, 0.18);
 }
 
 body.light .botao-projetos:hover {
@@ -1469,9 +1475,9 @@ body.light .botao-projetos:hover {
 }
 
 body.light .hero-sociais a {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(30, 41, 59, 0.12);
-    color: rgba(30, 41, 59, 0.7);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(125, 128, 107, 0.12);
+    color: rgba(35, 39, 26, 0.9);
 }
 
 body.light .hero-sociais a:hover {
@@ -1481,17 +1487,17 @@ body.light .hero-sociais a:hover {
 }
 
 body.light .foto-wrapper {
-    box-shadow: 0 0 50px rgba(var(--accent-rgb), 0.18), 0 20px 60px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 0 50px rgba(var(--accent-rgb), 0.18), 0 20px 60px rgba(125, 128, 107, 0.15);
 }
 
 body.light .foto-perfil {
-    background: #fff;
+    background: #F4F0E9;
 }
 
 body.light .hero-stats,
 body.light .projetos-stats {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(30, 41, 59, 0.08);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(125, 128, 107, 0.08);
 }
 
 body.light .stat-numero,
@@ -1501,7 +1507,7 @@ body.light .proj-stat-numero {
 
 body.light .stat-label,
 body.light .proj-stat-label {
-    color: rgba(30, 41, 59, 0.6);
+    color: rgba(35, 39, 26, 0.8);
 }
 
 /* Section headers e blocos */
@@ -1513,11 +1519,11 @@ body.light .projetos-subtitulo,
 body.light .paragrafo-projetos,
 body.light .exp-desc,
 body.light .skill-card li {
-    color: rgba(30, 41, 59, 0.65);
+    color: rgba(35, 39, 26, 0.85);
 }
 
 body.light .sobre-texto p {
-    color: rgba(30, 41, 59, 0.75);
+    color: rgba(35, 39, 26, 0.95);
 }
 
 body.light .sobre-texto strong,
@@ -1534,8 +1540,8 @@ body.light .skill-card,
 body.light .projetos-card,
 body.light .formulario-contato,
 body.light .contato-card {
-    background: rgba(255, 255, 255, 0.75);
-    border-color: rgba(30, 41, 59, 0.08);
+    background: rgba(255, 255, 255, 0.55);
+    border-color: rgba(125, 128, 107, 0.08);
 }
 
 body.light .formulario-contato {
@@ -1543,7 +1549,7 @@ body.light .formulario-contato {
 }
 
 body.light .contato-desc {
-    color: rgba(30, 41, 59, 0.7);
+    color: rgba(35, 39, 26, 0.9);
 }
 
 body.light .contato-card-label,
@@ -1555,24 +1561,24 @@ body.light .contato-card-valor,
 body.light .form-subtitulo,
 body.light .form-aviso,
 body.light .contato-status {
-    color: rgba(30, 41, 59, 0.6);
+    color: rgba(35, 39, 26, 0.8);
 }
 
 body.light .contato-card-seta {
-    color: rgba(30, 41, 59, 0.35);
+    color: rgba(35, 39, 26, 0.55);
 }
 
 body.light .campo-icon {
-    color: rgba(30, 41, 59, 0.4);
+    color: rgba(35, 39, 26, 0.6);
 }
 
 body.light .exp-empresa {
-    color: rgba(30, 41, 59, 0.55);
+    color: rgba(35, 39, 26, 0.75);
 }
 
 body.light .botao-ver-todos {
-    color: #1e293b;
-    border-color: rgba(30, 41, 59, 0.18);
+    color: #23271A;
+    border-color: rgba(125, 128, 107, 0.18);
 }
 
 body.light .botao-ver-todos:hover {
@@ -1582,33 +1588,33 @@ body.light .botao-ver-todos:hover {
 }
 
 body.light .carousel-btn {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(244, 240, 233, 0.8);
 }
 
 body.light .carousel-dot {
-    background: rgba(30, 41, 59, 0.18);
+    background: rgba(125, 128, 107, 0.18);
 }
 
 /* Form */
 body.light .campo-form {
-    background: rgba(255, 255, 255, 0.85);
-    border-color: rgba(30, 41, 59, 0.12);
-    color: #1e293b;
+    background: rgba(244, 240, 233, 0.85);
+    border-color: rgba(125, 128, 107, 0.12);
+    color: #23271A;
 }
 
 body.light .campo-form::placeholder {
-    color: rgba(30, 41, 59, 0.45);
+    color: rgba(35, 39, 26, 0.65);
 }
 
 /* Footer */
 body.light .texto-rodape {
-    border-top: 1px solid rgba(30, 41, 59, 0.08);
+    border-top: 1px solid rgba(125, 128, 107, 0.08);
 }
 
 body.light .rodape-sociais a {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(30, 41, 59, 0.1);
-    color: rgba(30, 41, 59, 0.7);
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(125, 128, 107, 0.1);
+    color: rgba(35, 39, 26, 0.9);
 }
 
 body.light .rodape-sociais a:hover {
@@ -1617,15 +1623,43 @@ body.light .rodape-sociais a:hover {
 }
 
 body.light .texto-rodape p {
-    color: rgba(30, 41, 59, 0.5);
+    color: rgba(35, 39, 26, 0.7);
 }
 
 body.light .nav-menu {
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(244, 240, 233, 0.97);
 }
 
 body.light .nav-menu a {
-    color: #1e293b;
+    color: #23271A;
+}
+
+/* Botões — cor mais forte para destaque */
+body.light .botao-curriculo,
+body.light .botao-form {
+    background: linear-gradient(135deg, #2E3522 0%, #1A1E12 100%);
+    color: #F4F0E9;
+    box-shadow: 0 8px 22px rgba(26, 30, 18, 0.35);
+}
+
+body.light .botao-curriculo:hover,
+body.light .botao-form:hover {
+    background: linear-gradient(135deg, #12150C 0%, #0B0D07 100%);
+    box-shadow: 0 12px 30px rgba(26, 30, 18, 0.5);
+}
+
+body.light .botao-projetos,
+body.light .botao-ver-todos {
+    color: #1A1E12;
+    border: 2px solid #1A1E12;
+    font-weight: 700;
+}
+
+body.light .botao-projetos:hover,
+body.light .botao-ver-todos:hover {
+    background: #12150C;
+    border-color: #12150C;
+    color: #F4F0E9;
 }
 
 /* ====== BACKGROUND ====== */
@@ -1639,6 +1673,126 @@ body.light .nav-menu a {
     background:
         radial-gradient(circle at 15% 25%, rgba(var(--accent-rgb), 0.08) 0%, transparent 40%),
         radial-gradient(circle at 85% 75%, rgba(var(--accent-dark-rgb), 0.06) 0%, transparent 40%);
+}
+
+/* texto do hero acima da órbita */
+.hero-text {
+    position: relative;
+    z-index: 4;
+}
+
+/* ====== ÓRBITA DE TECNOLOGIAS ====== */
+.orbita {
+    --orbita-r: 285px;
+    --orbita-card: 60px;
+    --orbita-tempo: 25s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 3;
+    pointer-events: none;
+    animation: orbita-girar var(--orbita-tempo) linear infinite;
+}
+
+.orbita-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transform: rotate(var(--ang)) translateX(var(--orbita-r)) rotate(calc(var(--ang) * -1));
+}
+
+/* contra-rotação: mantém o logo sempre na posição correta */
+.orbita-contra {
+    position: absolute;
+    top: calc(var(--orbita-card) / -2);
+    left: calc(var(--orbita-card) / -2);
+    display: block;
+    width: var(--orbita-card);
+    height: var(--orbita-card);
+    animation: orbita-contra var(--orbita-tempo) linear infinite;
+}
+
+.orbita-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background: rgba(244, 240, 233, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: orbita-flutuar 4s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.orbita-card img {
+    width: 56%;
+    height: 56%;
+    object-fit: contain;
+    display: block;
+}
+
+body.light .orbita-card {
+    background: rgba(244, 240, 233, 0.72);
+    border-color: rgba(63, 71, 48, 0.28);
+    box-shadow: 0 8px 22px rgba(35, 39, 26, 0.18);
+}
+
+@keyframes orbita-girar {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes orbita-contra {
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes orbita-flutuar {
+    0%, 100% { transform: translateY(-4px); }
+    50%      { transform: translateY(4px); }
+}
+
+@media (max-width: 968px) {
+    .orbita {
+        --orbita-r: 220px;
+        --orbita-card: 52px;
+    }
+
+    .hero-foto {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .orbita {
+        --orbita-r: min(calc((100vw - 4rem - var(--orbita-card)) / 2), 150px);
+        --orbita-card: 40px;
+    }
+
+    .hero-foto {
+        padding: 48px 0;
+    }
+
+    .orbita-card {
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orbita,
+    .orbita-contra,
+    .orbita-card {
+        animation: none;
+    }
 }
 
 /* ====== RESPONSIVIDADE ====== */
@@ -1721,7 +1875,10 @@ body.light .nav-menu a {
     }
 
     .nav-links {
-        padding: 1rem 1.5rem;
+        top: 10px;
+        left: 12px;
+        right: 12px;
+        padding: 0.7rem 1.2rem;
     }
 
     .nav-menu {
@@ -1732,6 +1889,7 @@ body.light .nav-menu a {
         max-width: 300px;
         height: 100vh;
         background: rgba(11, 17, 32, 0.97);
+        border-radius: 0;
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         flex-direction: column;
